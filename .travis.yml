@@ -67,6 +67,8 @@ after_script:
 - $GOPATH/bin/ccat config/packages/fos_user.yaml
 - $GOPATH/bin/ccat config/packages/framework.yaml
 - $GOPATH/bin/ccat config/packages/translation.yaml
+- $GOPATH/bin/ccat config/packages/routing.yaml
+- $GOPATH/bin/ccat config/packages/security.yaml
 
 - composer console -- debug:router
 - composer console -- server:start &
