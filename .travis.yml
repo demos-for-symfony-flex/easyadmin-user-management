@@ -65,6 +65,8 @@ after_script:
 - php -s config/bundles.php | elinks -force-html -dump-color-mode 4 -dump
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 - $GOPATH/bin/ccat config/packages/easy_admin.yaml
+- $GOPATH/bin/ccat config/packages/fos_user.yaml
+- $GOPATH/bin/ccat config/packages/framework.yaml
 - $GOPATH/bin/ccat config/packages/translation.yaml
 
 - composer console -- debug:router
