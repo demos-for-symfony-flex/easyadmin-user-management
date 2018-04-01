@@ -60,9 +60,11 @@ after_script:
 - composer console -- doctrine:query:sql "INSERT INTO author (name) VALUES ('Tom B. Erichsen')"
 - composer console -- doctrine:query:dql "SELECT a FROM App\Entity\Author a"
 - composer console -- doctrine:query:sql "SELECT * FROM author"
+
 - ls --recursive --color config
 - $GOPATH/bin/ccat config/packages/doctrine.yaml
 - $GOPATH/bin/ccat config/packages/easy_admin.yaml
+- $GOPATH/bin/ccat config/packages/translation.yaml
 
 - composer console -- debug:router
 - composer console -- server:start &
