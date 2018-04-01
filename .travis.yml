@@ -52,8 +52,7 @@ after_script:
 - ls --color src
 - ls --color src/Controller
 - ls --color src/Entity
-- php -s src/Entity/Author.php | elinks -force-html -dump-color-mode 4 -dump
-- php -s src/Entity/BlogPost.php | elinks -force-html -dump-color-mode 4 -dump
+- php -s src/Entity/User.php | elinks -force-html -dump-color-mode 4 -dump
 - ls --color src/Repository
 - php -s src/Repository/AuthorRepository.php | elinks -force-html -dump-color-mode 4 -dump
 - php -s src/Repository/BlogPostRepository.php | elinks -force-html -dump-color-mode 4 -dump
