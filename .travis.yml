@@ -39,10 +39,10 @@ before_install:
   fi
 
 install:
-- php -r "echo ini_get('memory_limit').PHP_EOL;"
-- composer self-update 1.7.3 # 1.8.0
-- composer --version
-- env COMPOSER_MEMORY_LIMIT=-1 composer update symfony/flex:1.1.7 # debugging Allowed memory exhausted
+# - php -r "echo ini_get('memory_limit').PHP_EOL;"
+# - composer self-update 1.7.3 # 1.8.0
+# - composer --version
+# - env COMPOSER_MEMORY_LIMIT=-1 composer update symfony/flex:1.1.7 # debugging Allowed memory exhausted
 - env COMPOSER_MEMORY_LIMIT=-1 composer install
 - composer initialize # -- --ansi
 
