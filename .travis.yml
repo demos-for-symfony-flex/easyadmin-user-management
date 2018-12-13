@@ -44,7 +44,7 @@ install:
 - env COMPOSER_MEMORY_LIMIT=-1 composer require --no-scripts sensiolabs/security-checker
 
 script:
-- composer security:check -- --end-point=http://security.sensiolabs.org/check_lock --ansi
+# - composer security:check -- --end-point=http://security.sensiolabs.org/check_lock --ansi
 - composer security:check -- --ansi
 
 after_script:
