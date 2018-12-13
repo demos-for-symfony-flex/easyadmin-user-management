@@ -39,9 +39,9 @@ before_install:
   fi
 
 install:
-- composer self-update 1.7.3 # Bug in 1.8.0
+- composer self-update 1.7.3 # 1.8.0
 - composer --version
-- composer update symfony/flex # debugging Allowed memory exhausted
+- composer update symfony/flex:1.1.7 # debugging Allowed memory exhausted
 - composer install
 - composer initialize # -- --ansi
 
