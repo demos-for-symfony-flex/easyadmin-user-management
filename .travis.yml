@@ -45,9 +45,10 @@ install:
 # - env COMPOSER_MEMORY_LIMIT=-1 composer update symfony/flex:1.1.7 # debugging Allowed memory exhausted
 - env COMPOSER_MEMORY_LIMIT=-1 composer install
 - composer initialize # -- --ansi
+- composer require --no-scripts sensiolabs/security-checker
 
 script:
-- composer require --no-scripts sensiolabs/security-checker &> /dev/null && composer security:check -- --end-point=http://security.sensiolabs.org/check_lock --ansi
+- composer security:check -- --end-point=http://security.sensiolabs.org/check_lock --ansi
 
 after_script:
 - ls --almost-all --color
