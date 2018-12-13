@@ -39,6 +39,7 @@ before_install:
   fi
 
 install:
+- composer update symfony/flex # debugging Allowed memory exhausted
 - composer install
 - composer initialize # -- --ansi
 
